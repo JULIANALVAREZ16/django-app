@@ -9,6 +9,9 @@ class User(models.Model):
     updated_at = models.DateTimeField(default = datetime.datetime.now())
     deleted_at = models.DateTimeField(null =True, blank = True)
 
+    def __str__(self):
+        return self.email
+
 class Students(models.Model):
     code = models.CharField(max_length = 50)
     id_person = models.IntegerField()
