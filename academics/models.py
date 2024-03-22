@@ -29,13 +29,6 @@ class Identification_type(models.Model):
     updated_at = models.DateTimeField(default = datetime.datetime.now())
     deleted_at = models.DateTimeField(null =True, blank = True)
 
-class Cities(models.Model):
-    name = models.CharField(max_length = 100)
-    abrev = models.CharField(max_length =10)
-    descrip = models.CharField(max_length =10)
-    created_at = models.DateTimeField(default = datetime.datetime.now())
-    updated_at = models.DateTimeField(default = datetime.datetime.now())
-    deleted_at = models.DateTimeField(null =True, blank = True)
 
 class Persons(models.Model):
     first_name = models.CharField(max_length = 50)
@@ -49,6 +42,7 @@ class Persons(models.Model):
     created_at = models.DateTimeField(default = datetime.datetime.now())
     updated_at = models.DateTimeField(default = datetime.datetime.now())
     deleted_at = models.DateTimeField(null =True, blank = True)
+    id_user = models.ForeignKey(User, on_delete=models.CASCADE, blank=False, null=False)
 
 class Cities(models.Model):
     name = models.CharField(max_length = 100)
