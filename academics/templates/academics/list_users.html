@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list Users</title>
+</head>
+<body bgcolor = "orange">
+    <h1> listado de usuarios</h1>
+    <ul>
+        {%for user in users %}
+        <li>
+            {{user.email}} {{user.password}} {{user.status}}
+            {%endfor%}
+        </li>
+    </ul>
+
+    
+</body>
+</html>
